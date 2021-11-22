@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'com.nneomablessyn'
-version = '0.0.1-SNAPSHOT'
+version = '1.0-SNAPSHOT'
 sourceCompatibility = '11'
 
 repositories {
@@ -15,14 +15,22 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.projectlombok:lombok:1.18.20'
 	implementation 'org.junit.jupiter:junit-jupiter:5.7.0'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
+	implementation group: 'net.kaczmarzyk', name: 'specification-arg-resolver', version: '2.6.2'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
 	//swagger
 	implementation group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
 	implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
 
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
+	testImplementation group: 'com.h2database', name: 'h2'
+	runtimeOnly group: 'org.postgresql', name: 'postgresql'
 }
 
 test {
