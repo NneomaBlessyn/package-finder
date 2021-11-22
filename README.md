@@ -28,7 +28,7 @@ Here are the steps for running Package finder:
 git clone https://github.com/NneomaBlessyn/package-finder.git
 cd package-finder (optional if you are in the project directory already)
 ./gradlew clean build
-docker-compose up
+docker compose up
 ```
 
 Yippie yayyy!!! You can now access the service.
