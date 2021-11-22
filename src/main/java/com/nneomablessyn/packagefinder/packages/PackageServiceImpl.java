@@ -17,13 +17,12 @@ import com.nneomablessyn.packagefinder.packages.repositories.PackageHistoryRepos
 import com.nneomablessyn.packagefinder.packages.repositories.PackageRepository;
 import com.nneomablessyn.packagefinder.packages.utils.ProxyTransformer;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 @Service
-@RequiredArgsConstructor(onConstructor = @__(@Autowired))
+@RequiredArgsConstructor
 public class PackageServiceImpl implements PackageService {
 
     private static final String PACKAGE_NOT_FOUND = "Package not found";
