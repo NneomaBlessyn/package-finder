@@ -14,6 +14,7 @@ Here's a link to the design document: https://drive.google.com/file/d/1mq4fmMiVt
 
 ###Prerequisites
 - Install Docker
+- Java 11
 
 ### Initial Configuration
 
@@ -40,6 +41,12 @@ To run the tests on the project:
 ```
 
 ### Testing
+Steps:
+1. Create a user using the create user API
+2. Login with user using the user login API
+3. Copy bearer token at the bottom of payload
+4. Use token for authentication (ps: add "Bearer " before token. Eg. "Bearer hfhjdfkdjhdhjlsks" )
+
 Things to test
 - Register a package
 - Fetch package by order ID
