@@ -11,7 +11,6 @@ import com.nneomablessyn.packagefinder.packages.dto.responses.PackageInfo;
 import com.nneomablessyn.packagefinder.packages.dto.responses.PackageTrackingInfo;
 import com.nneomablessyn.packagefinder.packages.enums.Status;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,7 +27,7 @@ import javax.validation.constraints.NotNull;
 
 @RestController
 @RequestMapping("v1/package")
-@RequiredArgsConstructor(onConstructor = @__(@Autowired))
+@RequiredArgsConstructor
 public class PackageController {
 
     private final PackageService packageService;
